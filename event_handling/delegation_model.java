@@ -14,6 +14,7 @@ public class delegation_model {
         GUI gui = new GUI(app);
     }
 }
+
 class Command implements ActionListener{
     static final int SEARCH = 0;
     static final int SORT = 1;
@@ -49,9 +50,9 @@ class GUI {
 
         Button b;
         f.add(b=new Button("Search"));
-        b.addActionListener(searchCmd);
+        b.addActionListener(searchCmd); //since it extends actionlistener
         f.add(b=new Button("Sort"));
-        b.addActionListener(sortCmd);
+        b.addActionListener(sortCmd); //since it extend actionlistener
 
         List l = new List(2,false);
         f.add(new List());
